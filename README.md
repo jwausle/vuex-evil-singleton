@@ -1,7 +1,13 @@
-# vue-dummy2
+# vuex evil singleton	
+
+* web ([link](https://github.com/jwausle/vuex-evil-singleton)) 
+* clone ([https://github.com/jwausle/vuex-evil-singleton.git](https://github.com/jwausle/vuex-evil-singleton.git))
+
+Vuex sample to show the risk of the evil singleton state handling.
 
 ## Project setup
 ```
+git clone https://github.com/jwausle/vuex-evil-singleton.git
 yarn install
 ```
 
@@ -9,21 +15,3 @@ yarn install
 ```
 yarn run serve
 ```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
