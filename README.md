@@ -44,3 +44,22 @@ That's ugly :# ... What can I do? I guess the best guess is:
 
 > The store should _only_ return copies of state objects.
 
+```
+Vue.use(Vuex);
+
+export default new Vuex.Store({
+  state: {
+    foo: { bar: 'stored value' },
+  },
+  getters: {
+    fooCopy(state) { return Object.assign({}, state.foo); },
+  },
+  mutations: {
+    setFoo(state, foo) { state.foo = foo; }, // Erste Idee
+  },
+  actions: { },
+});
+```
+
+The developer should never `$store.state.foo.bar = ...` or anything else directlly. Instead he should use the `$store.getters.fooCopy` to get a copy and `$store.commit('setFoo', updatedCopy)` to change state of the store.
+
